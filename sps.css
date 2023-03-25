@@ -52,6 +52,15 @@ img{
     font-size: 1.7rem;
     text-align: center;
 }
+.totalScore{
+    margin: 10px 10px;
+}
+.hands{
+    margin: 10px 10px;
+}
+.result{
+    margin: 10px 10px;
+}
 
  /*  Styling Temp (which Used To Welcome And Ask User Thier In Game Name
  Styling for the temp background */
@@ -78,7 +87,7 @@ img{
     text-align: center;
     font-family: 'Poppins', sans-serif;
   }
-  .modal-header {
+  h2 {
     font-size: 24px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
@@ -99,12 +108,57 @@ img{
     padding: 8px 20px;
     border-radius: 5px;
     border: none;
-    background-color: #39d73f;
+    background-color: #0aff13;
     color: white;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
   } 
 
+  .scoreType{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  #maxSco{
+    cursor: pointer;
+    width: 15vh;
+  }
+
+  .winBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(76, 160, 69, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .winText {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  #winBtn{
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #39d73f;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  } 
  /* Media Quaery  */
   @media screen and(max-width:550px) {
     .tempText{

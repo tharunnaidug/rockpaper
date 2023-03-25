@@ -7,33 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Game</title>
     <link rel="stylesheet" href="sps.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Kanit:ital,wght@1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Kanit:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
     <h1 id="text">Rock Paper Scissor</h1>
     <!-- asking Input For Ingame Name And Welcoming Them -->
-   <div class="tempBg" id="tempBg">
-    <div class="tempText" id="tempText">
-        <h2 id="text">Hello User Welcome to "Rock Paper Scissor"</h2>
-        <h3 id="text">Enter Your In-Game Name</h3>
-        <div class="tempInp" >
-            <input type="tel" name="name" id="user" placeholder="Guest"/>
+    <div class="tempBg" id="tempBg">
+        <div class="tempText" id="tempText">
+            <h2 id="text">Hello User</h2>
+            <h2 id="text"> Welcome to "Rock Paper Scissor"</h2>
+            <form>
+                <div class="scoreType">
+                    <p class="text">Select Winning Score</p>
+                <input type="radio"  name="maxScore" id="tempMaxSco" value="10" checked>10
+                <input type="radio" name="maxScore" id="tempMaxSco" value="25">25
+                <input type="radio" name="maxScore" id="tempMaxSco" value="50">50
+                <input type="radio" name="maxScore" id="tempMaxSco" value="100">100
+                </div>
+                <h3 id="text">Enter Your In-Game Name</h3>
+                <div class="tempInp">
+                    <input type="text" name="name" id="user" placeholder="Guest" />
+                </div>
+            </form>
+            <div><button id="tempBtn" onclick="submit()">Play</button>
+            </div>
         </div>
-        <div ><button type="submit" id="tempBtn" onclick="submit()">Play</button></div>
     </div>
-   </div>
+    <!-- Winner Declaring -->
+    <div class="winBg" id="winBg">
+        <div class="winText" id="winText">
+            <h4 id="finalRes"></h4>
+            <div><button id="winBtn" onclick="endGame()">Play Again!</button>
+        </div>
+        </div>
+    </div>
 
-   <!-- body For The Game-->
+    <!-- body For The Game-->
     <div class="outer">
         <div class="player">Player :<span id="name">Guest</span></div>
         <div class="buttons">
@@ -42,8 +65,8 @@
             <button class="rpsButton" id="rpsbtn" value="Scisscor"><img src="img/scissor.png" alt="scissor"></button>
         </div>
         <div class="resultCon">
-            <div class="totalScore">Your Score :<span id="pts">0</span></div>
-            <div class="totalScore">Computer Score :<span id="cts">0</span></div>
+            <div class="totalScore">Your Score :<span id="pts">0</span>/ <span id="max"></span></div>
+            <div class="totalScore">Computer Score :<span id="cts">0</span id="max">/ <span id="max1"></span></div>
             <div class="hands" id="hands"> </div>
             <div class="result" id="result"> </div>
             <button class="btn" id="endBtn"><span class="material-symbols-outlined">
@@ -51,6 +74,8 @@
                 </span></button>
         </div>
     </div>
+    
     <script type="text/javascript" src="sps.js"></script>
 </body>
+
 </html>
